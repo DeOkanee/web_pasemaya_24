@@ -1,0 +1,392 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-image: url('/img/BG.jpg');
+  background-repeat: no-repeat; /* Menghindari pengulangan gambar */
+  background-size: cover; /* Menutupi seluruh area body */
+  background-position: center; /* Menempatkan gambar di tengah */
+  background-attachment: fixed; /* Membuat gambar tetap di tempat saat di-scroll */
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  box-shadow: 0 0 10px 10px rgba(44, 44, 44, 0.432);
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 888; /* Memastikan header berada di atas konten lainnya */
+}
+
+.logo-left img,
+.logo-right img {
+  width: 50px; /* Sesuaikan ukuran logo */
+  height: auto;
+  margin: 4px 5px;
+}
+
+.title {
+  font-size: 12px;
+  text-align: center;
+  flex-grow: 1; /* Mengisi ruang kosong di tengah */
+  font-family: "Font1", sans-serif; /* Menggunakan Font1, dengan sans-serif sebagai cadangan */
+}
+.container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 900px;
+  overflow: hidden;
+  margin-top: 8%;
+}
+
+.pamflet {
+  flex: 1;
+  order: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Memastikan gambar berada di tengah */
+}
+
+.pamflet img {
+  max-width: 100%; /* Maksimum lebar gambar adalah 100% dari parentnya */
+  height: auto;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.438);
+}
+
+.text {
+  flex: 1;
+  order: 2;
+  padding-left: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 20px;
+
+}
+.text h1 {
+  margin-bottom: 0;
+  font-size: 35px;
+  color: #f0b800;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.text p{
+  font-size: 16px;
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* LOmba */
+.perlombaan {
+
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 10%;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+.perlombaan h1 {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: rgb(255, 255, 255);
+  color: #f0b800;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.lomba {
+  margin-left: 20px;
+  margin-right: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tiga kolom dengan lebar yang sama */
+  gap: 30px 30px; /* Jarak antara kartu */
+  justify-content: center; /* Pusatkan kartu secara horizontal */
+}
+
+.lomba-list {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.lomba-list img {
+  max-width: 100%;
+  height: auto;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.info h2 {
+    text-align: center;
+  margin: 0;
+  font-size: 18px;
+}
+
+.buttons {
+  margin-top: 20px;
+  align-items: flex-start;
+
+}
+
+.buttons a{
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    border-radius: 5px;
+  padding: 8px 16px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+}
+.buttons a:hover{
+    background-color: #0069d9;
+}
+footer {
+  background-color: #525252;
+  color: #fff;
+  padding: 20px 0;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.bawah {
+  width: 100%;
+  max-width: 1200px; /* Optional: jika Anda ingin batasi lebar maksimum */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left p {
+  margin: 0;
+}
+.footer-left p a {
+  text-decoration: none;
+  color: rgb(59, 193, 255);
+}
+.footer-left p a:hover {
+  color: white;
+}
+.footer-right nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.footer-right nav ul li {
+  margin-right: 20px;
+}
+
+.footer-right nav ul li:last-child {
+  margin-right: 0;
+}
+
+.footer-right nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-right nav ul li a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 767px) {
+    .logo-left img,
+    .logo-right img {
+      width: 40px; /* Sesuaikan ukuran logo */
+    }
+    .title {
+      font-size: 11px;
+    }
+    .container {
+      margin-top: 25%;
+      flex-direction: column;
+      width: 80%;
+    }
+    .pamflet,
+    .text {
+      order: initial;
+      width: 100%;
+    }
+    .text h1 {
+    text-align: center;
+        font-size: 26px;
+      }
+      .text p {
+        text-align: justify;
+      }
+    .text {
+      padding-left: 0;
+    }
+    .perlombaan {
+  
+      width: 97%;
+      margin-top: 20%;
+      padding-top: 10px;
+    }
+    .perlombaan h1 {
+      text-align: center;
+      font-size: 20px;
+    }
+    .lomba {
+      margin-left: 10px;
+      margin-right: 10px;
+      display: grid;
+      grid-template-columns: repeat(
+        2,
+        1fr
+      ); /* Tiga kolom dengan lebar yang sama */
+      gap: 10px 10px; /* Jarak antara kartu */
+      justify-content: center; /* Pusatkan kartu secara horizontal */
+    }
+    .lomba-list {
+      padding: 10px;
+    }
+    .info h2 {
+      margin: 0;
+      font-size: 16px;
+    }
+    .buttons {
+        margin-bottom: 6px;
+      margin-top: 20px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      margin-left: 15px;
+    }
+    .buttons a {
+        font-size: 12px;
+  border-radius: 6px;
+      padding: 8px 10px;
+      border: none;
+      margin-bottom: 5px;
+  }
+  footer {
+    bottom: 0;
+    padding: 15px 0; /* Ubah padding agar lebih ramping */
+  }
+  .bawah {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .footer-left,
+  .footer-right {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .footer-right nav ul {
+    justify-content: center;
+  }
+  .footer-right nav ul li {
+    margin: 0 10px;
+
+  }
+  }
+  
+@media (max-width: 440px) {
+  .logo-left img,
+  .logo-right img {
+    width: 40px; /* Sesuaikan ukuran logo */
+  }
+  .title {
+    font-size: 11px;
+  }
+  .container {
+    margin-top: 25%;
+    flex-direction: column;
+    width: 80%;
+  }
+  .pamflet,
+  .text {
+    order: initial;
+    width: 100%;
+  }
+  .text h1 {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .text p{
+    text-align: justify;
+    font-size: 16px;
+  }
+  .text {
+    padding-left: 0;
+  }
+  .perlombaan {
+
+    width: 97%;
+    margin-top: 20%;
+    padding-top: 10px;
+  }
+  .perlombaan h1 {
+    text-align: center;
+    font-size: 20px;
+  }
+  .lomba {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Tiga kolom dengan lebar yang sama */
+    gap: 10px 10px; /* Jarak antara kartu */
+    justify-content: center; /* Pusatkan kartu secara horizontal */
+  }
+  .lomba-list {
+    padding: 10px;
+  }
+  .info h2 {
+    margin: 0;
+    font-size: 16px;
+  }
+  .buttons {
+    margin-top: 15px;
+    text-align: left;
+  }
+  .buttons a {
+font-size: 10px;
+border-radius: 6px;
+    padding: 8px 8px;
+    border: none;
+    margin-bottom: 5px;
+}
+footer {
+  padding: 10px 0; /* Ubah padding agar lebih ramping */
+}
+.bawah {
+  flex-direction: column;
+  text-align: center;
+  margin-top: 10px;
+}
+.footer-left,
+.footer-right {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.footer-right nav ul {
+  justify-content: center;
+  text-align: center;
+}
+.footer-right nav ul li {
+  margin: 0 10px;
+}
+}
