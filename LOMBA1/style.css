@@ -170,6 +170,13 @@ height: auto;
 
 /* Responsive Styles */
 @media (max-width: 767px) {
+  .logo-left img,
+  .logo-right img {
+    width: 40px; /* Sesuaikan ukuran logo */
+  }
+  .title {
+    font-size: 11px;
+  }
   .container {
     max-width: 1000px;
     margin: 0 auto;
@@ -185,6 +192,7 @@ height: auto;
   .textarea {
     width: calc(100% - 0);
   }
+
  
 }
 @media (max-width: 440px) {
