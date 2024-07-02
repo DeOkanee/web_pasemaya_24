@@ -1,15 +1,14 @@
-a<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PASEMAYA BEM FDA 24</title>
+    <title>Form2</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="Pilih Semester/select.css"/>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
-    <!--DATA INPUT TANPA FILE-->
     <header>
       <div
         class="logo-left"
@@ -40,7 +39,7 @@ a<!DOCTYPE html>
       <form
         id="form"
         class="container m-4 pl-4"
-        action="https://script.google.com/macros/s/AKfycbzKOlVWNhzrBuVu7k9iQsQzssAcK30OXCB2qrvEpBduPGEKn3WJQGscXlYlj6IRzRo/exec"
+        action="https://script.google.com/macros/s/AKfycbwrzwLqy20nKDGzyxuGjUQPfPM3sxrO-SgCPAIGB2aYdX3-W_GwWnoRJ2sPWYzuwm4/exec"
         method="post"
         enctype="multipart/form-data"
         onsubmit="handleSubmit(event)"
@@ -133,7 +132,6 @@ a<!DOCTYPE html>
             />
           </div>
         </div>
-
         <div class="field">
           <label class="label">Semester</label>
           <div class="control">
@@ -150,7 +148,6 @@ a<!DOCTYPE html>
             </div>
           </div>
         </div>
-        
 
         <div class="field">
           <label class="label">Alamat</label>
@@ -164,7 +161,6 @@ a<!DOCTYPE html>
             ></textarea>
           </div>
         </div>
-
         <div class="field">
           <label class="label">Nomor WhatsApp</label>
           <div class="control">
@@ -174,6 +170,18 @@ a<!DOCTYPE html>
               placeholder="Nomor WhatsApp Aktif"
               name="WhatsApp"
               id="whatsapp"
+            />
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Upload File</label>
+          <p class="text-file">Ukuran file tergantung lama mengirim</p>
+          <div class="control">
+            <input
+              class="input"
+              type="file"
+              name="fileToUpload"
+              id="fileToUpload"
             />
           </div>
         </div>
@@ -197,21 +205,66 @@ a<!DOCTYPE html>
         <h2>Data Anda Berhasil Dikirim!</h2>
         <div class="button-group">
           <a
-            href="/index.html"
-            class="button is-primary download-button"
-            >Kembali</a
-          >
+          href="/index.html"
+          class="button is-primary download-button"
+          >Kembali</a
+        >
           <button class="button is-primary" onclick="handleAnother()">
             Kirim data ulang
           </button>
         </div>
       </div>
     </section>
-   
 
-
-    
     <script src="Pilih Semester/drop.js"></script>
+    <script>
+      function handleSubmit(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        const nim = document.getElementById("nim").value;
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const tanggal = document.getElementById("tanggal").value;
+        const genderLaki = document.getElementById("gender_laki").checked;
+        const genderPerempuan =
+          document.getElementById("gender_perempuan").checked;
+        const kelas = document.getElementById("kelas").value;
+        const semester = document.getElementById("semester").value;
+        const alamat = document.getElementById("alamat").value;
+        const whatsapp = document.getElementById("whatsapp").value;
+        const file = document.getElementById("fileToUpload").files[0];
+
+        const submitButton = document.getElementById("submit-button");
+
+        // Check if any required field is empty
+        if (
+          nim === "" ||
+          name === "" ||
+          email === "" ||
+          tanggal === "" ||
+          (!genderLaki && !genderPerempuan) ||
+          kelas === "" ||
+          semester === "" ||
+          alamat === "" ||
+          whatsapp === "" ||
+          !file
+        ) {
+          // Jika ada yang kosong, tampilkan "Kirim"
+          submitButton.textContent = "Kirim";
+          return;
+        }
+
+        // Jika semua terisi, tampilkan "Sedang Mengirim..."
+        submitButton.textContent = "Sedang Mengirim...";
+
+        setTimeout(() => {
+          submitButton.textContent = "Kirim"; // Mengembalikan teks tombol menjadi "Kirim" setelah 5 detik
+        }, 5000);
+
+        // Lakukan pengiriman data
+        // (Tambahkan kode pengiriman data di sini, seperti yang Anda lakukan sebelumnya)
+      }
+    </script>
     <script>
       const form = document.getElementById("form");
       const Toast = Swal.mixin({
@@ -256,63 +309,63 @@ a<!DOCTYPE html>
           document.getElementById("success-section").style.display = "block";
         }
       }
-     
-      function handleSubmit(event) {
-        event.preventDefault(); // Prevent the default form submission
 
-        const submitButton = document.getElementById("submit-button");
-        submitButton.textContent = "Sedang Mengirim..."; // Mengubah teks tombol menjadi "Sedang Mengirim..."
-
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
         const formData = new FormData(form);
+        const file = form.fileToUpload.files[0];
 
-        let valid = true;
-        for (let value of formData.values()) {
-          if (!value) {
-            valid = false;
-            break;
-          }
-        }
-
-        if (!valid) {
+        if (!file) {
           Toast.fire({
             icon: "error",
             title: "Data tidak boleh kosong",
           });
-          submitButton.textContent = "Kirim"; // Kembalikan teks tombol ke "Kirim"
           return;
         }
 
-        fetch(form.action, {
-          method: "POST",
-          body: formData,
-        })
-          .then((response) => {
-            if (response.ok) {
-              setCookie("formSubmitted", "true", 1);
-              Toast.fire({
-                icon: "success",
-                title: "Form berhasil dikirim",
-              }).then(() => {
-                document.getElementById("form-section").style.display = "none";
-                document.getElementById("success-section").style.display =
-                  "block";
-              });
-            } else {
-              Toast.fire({
-                icon: "error",
-                title: "Gagal mengirim form. Coba lagi.",
-              });
-            }
-            submitButton.textContent = "Kirim"; // Kembalikan teks tombol ke "Kirim"
-          })
-          .catch((error) => {
+        const reader = new FileReader();
+        reader.readAsArrayBuffer(file);
+        reader.onload = async (event) => {
+          const url = form.action;
+          const qs = new URLSearchParams({
+            filename: file.name,
+            mimeType: file.type,
+            NIM: form.NIM.value,
+            Name: form.Name.value,
+            Email: form.Email.value,
+            Tanggal: form.Tanggal.value,
+            Gender: form.Gender.value,
+            Kelas: form.Kelas.value,
+            Semester: form.Semester.value,
+            Alamat: form.Alamat.value,
+            WhatsApp: form.WhatsApp.value,
+          });
+
+          const fileArray = [...new Int8Array(event.target.result)];
+          const response = await fetch(`${url}?${qs}`, {
+            method: "POST",
+            body: JSON.stringify(fileArray),
+          });
+
+          if (response.ok) {
+            const data = await response.json();
+            setCookie("formSubmitted", "true", 1);
+            Toast.fire({
+              icon: "success",
+              title: "Data berhasil dikirim",
+            }).then(() => {
+              document.getElementById("form-section").style.display = "none";
+              document.getElementById("success-section").style.display =
+                "block";
+            });
+          } else {
             Toast.fire({
               icon: "error",
-              title: "Terjadi kesalahan. Coba lagi.",
+              title: "Gagal mengirim data. Coba lagi.",
             });
-            submitButton.textContent = "Kirim"; // Kembalikan teks tombol ke "Kirim"
-          });
-      }
+          }
+        };
+      });
 
       function handleAnother() {
         document.getElementById("form-section").style.display = "block";

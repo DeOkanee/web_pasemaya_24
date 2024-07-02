@@ -185,7 +185,6 @@ height: auto;
   .textarea {
     width: calc(100% - 0);
   }
- 
 }
 @media (max-width: 440px) {
   .logo-left img,
@@ -210,5 +209,4 @@ height: auto;
   .textarea {
     width: calc(100% - 0);
   }
-  
 }
