@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form2</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="Pilih Semester/select.css"/>
+    <link rel="stylesheet" href="Pilih Semester/select.css" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
   </head>
@@ -21,8 +24,13 @@
         <img src="../img/LOGO UHN-01.png" alt="Logo Left" />
       </div>
       <div class="title">
-        <h1>BEM FDA OFFICIAL 
-          <img src="../img/centangbiru.png" alt="Centang Biru" class="centang-biru">
+        <h1>
+          BEM FDA OFFICIAL
+          <img
+            src="../img/centangbiru.png"
+            alt="Centang Biru"
+            class="centang-biru"
+          />
         </h1>
       </div>
       <div
@@ -98,14 +106,14 @@
             />
           </div>
         </div>
-      
+
         <script>
-          $(document).ready(function() {
+          $(document).ready(function () {
             $("#tanggal").datepicker({
               dateFormat: "dd/mm/yy",
               changeYear: true,
               yearRange: "2000:c",
-              defaultDate: new Date(2000, 0, 1)
+              defaultDate: new Date(2000, 0, 1),
             });
           });
         </script>
@@ -155,7 +163,9 @@
                 <!-- Loop untuk semester 1 sampai 20 -->
                 <script>
                   for (let i = 1; i <= 20; i++) {
-                    document.write(`<option value="${i}">Semester ${i}</option>`);
+                    document.write(
+                      `<option value="${i}">Semester ${i}</option>`
+                    );
                   }
                 </script>
               </select>
@@ -175,11 +185,13 @@
             ></textarea>
           </div>
         </div>
+        <!-- WHATSAPP-->
         <div class="field">
           <label class="label">Nomor WhatsApp</label>
           <div class="control">
+            <span class="prefix"></span>
             <input
-              class="input"
+              class="input input-prefix"
               type="text"
               placeholder="Nomor WhatsApp Aktif"
               name="WhatsApp"
@@ -187,6 +199,26 @@
             />
           </div>
         </div>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            const whatsappInput = document.getElementById("whatsapp");
+            whatsappInput.value = "+62";
+
+            whatsappInput.addEventListener("focus", () => {
+              if (whatsappInput.value === "+62") {
+                whatsappInput.setSelectionRange(3, 3); // Posisikan kursor setelah +62
+              }
+            });
+
+            whatsappInput.addEventListener("input", () => {
+              if (!whatsappInput.value.startsWith("+62")) {
+                whatsappInput.value = "+62";
+              }
+            });
+          });
+        </script>
+        <!-- WHATSAPP-->
         <div class="field">
           <label class="label">Upload File</label>
           <p class="text-file">Ukuran file tergantung lama mengirim</p>
@@ -218,11 +250,9 @@
       <div id="data-terimpan">
         <h2>Data Anda Berhasil Dikirim!</h2>
         <div class="button-group">
-          <a
-          href="/index.html"
-          class="button is-primary download-button"
-          >Kembali</a
-        >
+          <a href="/index.html" class="button is-primary download-button"
+            >Kembali</a
+          >
           <button class="button is-primary" onclick="handleAnother()">
             Kirim data ulang
           </button>

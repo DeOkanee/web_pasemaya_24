@@ -220,3 +220,18 @@ height: auto;
   }
   
 }
+/* STYLE NOMOR WA +62 */
+
+.input-prefix {
+  padding-left: 10px; /* Sesuaikan dengan panjang prefix */
+}
+.prefix {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+}
+.control {
+  position: relative;
+}
