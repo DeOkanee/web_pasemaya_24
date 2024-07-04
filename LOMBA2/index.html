@@ -88,13 +88,24 @@
           <div class="control">
             <input
               class="input"
-              type="date"
+              type="text"
               placeholder="Tanggal Lahir"
               name="Tanggal"
               id="tanggal"
             />
           </div>
         </div>
+      
+        <script>
+          $(document).ready(function() {
+            $("#tanggal").datepicker({
+              dateFormat: "dd/mm/yy",
+              changeYear: true,
+              yearRange: "2000:c",
+              defaultDate: new Date(2000, 0, 1)
+            });
+          });
+        </script>
 
         <div class="field">
           <label class="label">Gender</label>
