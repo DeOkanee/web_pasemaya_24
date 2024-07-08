@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PASEMAYA BEM FDA 24</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="Pilih Semester/select.css" />
+    <link rel="icon" href="/img/ICON BEM FDA.png" type="image/x-icon" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link
       rel="stylesheet"
@@ -26,12 +26,13 @@
       </div>
       <div class="title">
         <h1>
-          BEM FDA OFFICIAL
           <img
-            src="../img/centangbiru.png"
-            alt="Centang Biru"
-            class="centang-biru"
+            src="/img/ICON BEM FDA.png"
+            alt="BEM FDA"
+            class="icon-bem"
           />
+          BEM FDA OFFICIAL
+          
         </h1>
       </div>
       <div
@@ -51,23 +52,12 @@
       <form
         id="form"
         class="container m-4 pl-4"
-        action="https://script.google.com/macros/s/AKfycbzKOlVWNhzrBuVu7k9iQsQzssAcK30OXCB2qrvEpBduPGEKn3WJQGscXlYlj6IRzRo/exec"
+        action="https://script.google.com/macros/s/AKfycby0dTPh03uE-WSSVp_-AxHsylpKfiq6WCNLIH6fy7zP6qP9jQt3EerVu0HV6Skpw1fM2g/exec"
         method="post"
         enctype="multipart/form-data"
         onsubmit="handleSubmit(event)"
       >
-        <div class="field">
-          <label class="label">NIM</label>
-          <div class="control">
-            <input
-              class="input"
-              type="text"
-              placeholder="NIM"
-              name="NIM"
-              id="nim"
-            />
-          </div>
-        </div>
+       
 
         <div class="field">
           <label class="label">Name</label>
@@ -96,28 +86,56 @@
         </div>
 
         <div class="field">
-          <label class="label">Tanggal Lahir</label>
+          <label class="label">Jenjang</label>
           <div class="control">
-            <input
-              class="input"
-              type="text"
-              placeholder="Tanggal Lahir"
-              name="Tanggal"
-              id="tanggal"
-            />
+              <label class="radio">
+                  <input
+                      type="radio"
+                      name="Jenjang"
+                      value="SD"
+                      id="Jenjang_sd"
+                  />
+                  SD
+              </label>
+              <label class="radio">
+                  <input
+                      type="radio"
+                      name="Jenjang"
+                      value="SMP"
+                      id="Jenjang_smp"
+                  />
+                  SMP
+              </label>
+              <label class="radio">
+                  <input
+                      type="radio"
+                      name="Jenjang"
+                      value="SMA / SMK"
+                      id="Jenjang_sma_smk"
+                  />
+                  SMA / SMK
+              </label>
+              <label class="radio">
+                  <input
+                      type="radio"
+                      name="Jenjang"
+                      value="Mahasiswa"
+                      id="Jenjang_mahasiswa"
+                  />
+                  Mahasiswa
+              </label>
+              <label class="radio">
+                  <input
+                      type="radio"
+                      name="Jenjang"
+                      value="Umum"
+                      id="Jenjang_umum"
+                  />
+                  Umum
+              </label>
           </div>
-        </div>
-
-        <script>
-          $(document).ready(function () {
-            $("#tanggal").datepicker({
-              dateFormat: "dd/mm/yy",
-              changeYear: true,
-              yearRange: "2000:c",
-              defaultDate: new Date(2000, 0, 1),
-            });
-          });
-        </script>
+      </div>
+      
 
         <div class="field">
           <label class="label">Gender</label>
@@ -143,35 +161,17 @@
           </div>
         </div>
 
+        
         <div class="field">
-          <label class="label">Kelas</label>
+          <label class="label">Asal Sekolah</label>
           <div class="control">
-            <input
-              class="input"
-              type="text"
-              placeholder="Contoh: A2 Denpasar"
-              name="Kelas"
-              id="kelas"
-            />
-          </div>
-        </div>
-
-        <div class="field">
-          <label class="label">Semester</label>
-          <div class="control">
-            <div class="custom-select">
-              <select name="Semester" id="semester">
-                <option value="" disabled selected>Pilih Semester</option>
-                <!-- Loop untuk semester 1 sampai 20 -->
-                <script>
-                  for (let i = 1; i <= 20; i++) {
-                    document.write(
-                      `<option value="${i}">Semester ${i}</option>`
-                    );
-                  }
-                </script>
-              </select>
-            </div>
+            <textarea
+              rows="1"
+              class="textarea"
+              placeholder=""
+              name="Asal_sekolah"
+              id="alamat"
+            ></textarea>
           </div>
         </div>
 
@@ -251,7 +251,7 @@
       </div>
     </section>
 
-    <script src="Pilih Semester/drop.js"></script>
+   
     <script>
       const form = document.getElementById("form");
       const Toast = Swal.mixin({
@@ -301,7 +301,7 @@
         event.preventDefault(); // Prevent the default form submission
 
         const submitButton = document.getElementById("submit-button");
-        submitButton.textContent = "Sedang Mengirim..."; // Mengubah teks tombol menjadi "Sedang Mengirim..."
+        submitButton.textContent = "Sedang Mengirim...tunggu notif success"; // Mengubah teks tombol menjadi "Sedang Mengirim..."
 
         const formData = new FormData(form);
 
@@ -331,7 +331,7 @@
               setCookie("formSubmitted", "true", 1);
               Toast.fire({
                 icon: "success",
-                title: "Form berhasil dikirim",
+                title: "Data success dikirim",
               }).then(() => {
                 document.getElementById("form-section").style.display = "none";
                 document.getElementById("success-section").style.display =
@@ -340,7 +340,7 @@
             } else {
               Toast.fire({
                 icon: "error",
-                title: "Gagal mengirim form. Coba lagi.",
+                title: "Gagal mengirim data. Coba lagi.",
               });
             }
             submitButton.textContent = "Kirim"; // Kembalikan teks tombol ke "Kirim"
