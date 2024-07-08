@@ -83,7 +83,11 @@ height: auto;
   flex-direction: column;
   gap: 10px; /* Jarak antara tautan dan tombol */
 }
-
+@media (max-width: 767px){
+  .button-group {
+    width: 50%;
+  }
+}
 @media (max-width: 440px){
   .button-group {
     width: 60%;
