@@ -1,0 +1,51 @@
+/* Styling for the info icon */
+.info-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  font-size: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.466);
+}
+
+/* Styling for the announcement box */
+.announcement-box {
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 0 15px black;
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  right: 40px;
+
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  max-height: 400px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.announcement-box ul {
+  list-style-type: none;
+  padding: 10px;
+  margin: 0;
+}
+
+.announcement-box ul li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.announcement-box ul li:last-child {
+  border-bottom: none;
+}

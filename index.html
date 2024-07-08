@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/cp.css" />
     <link rel="stylesheet" href="css/ketentuan.css" />
+    <link rel="stylesheet" href="css/icon-informasi.css" />
     <link rel="icon" href="img/ICON BEM FDA.png" type="image/x-icon" />
     <link
       rel="stylesheet"
@@ -446,6 +447,18 @@
       </div>
     </section>
 
+    <!--ICON INFORMASI-->
+    <div class="info-icon" onclick="toggleAnnouncementBox()">ℹ️</div>
+
+    <div class="announcement-box" id="announcementBox">
+        <ul>
+            <li>Lomba dibuka secara umum seBali</li>
+            <li>Acara dimulai pukul 09.00 WIB</li>
+            <li>Pendaftaran dibuka hingga 20 Juli 2024</li>
+            <li>Untuk informasi lebih lanjut, Contact panitia</li>
+        </ul>
+    </div>
+
     <footer>
       <div class="bawah">
         <div class="footer-left">
@@ -470,6 +483,18 @@
       </div>
     </footer>
     
+    <!--Icon informasi SC-->
+    <script>
+      function toggleAnnouncementBox() {
+          var box = document.getElementById('announcementBox');
+          if (box.style.display === 'none' || box.style.display === '') {
+              box.style.display = 'block';
+          } else {
+              box.style.display = 'none';
+          }
+      }
+  </script>
+    <!--Icon informasi SC-->
     <script src="js/contact.js"></script>
     <script src="js/pop up.js"></script>
     <script src="js/ketentuan.js"></script>
