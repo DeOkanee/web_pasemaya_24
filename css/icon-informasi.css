@@ -14,20 +14,22 @@
   cursor: pointer;
   z-index: 1000;
   font-size: 25px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.466);
+ box-shadow: 0 0 100px black;
+  font-weight: bold; 
+
 }
 
 /* Styling for the announcement box */
 .announcement-box {
-  border-radius: 16px;
+  border-radius: 25px 25px 0 25px ; /* Atas kiri, atas kanan, bawah kanan, bawah kiri */
   background: #ffffff;
   box-shadow: 0 0 15px black;
   display: none;
   position: fixed;
   bottom: 80px;
-  right: 40px;
+  right: 50px;
 
-  border: 1px solid #ddd;
+  border: 1px solid #303030;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 300px;
   max-height: 400px;

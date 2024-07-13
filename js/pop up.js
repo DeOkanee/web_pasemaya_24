@@ -6,9 +6,8 @@ document.addEventListener('DOMContentLoaded', async function() {
         imageHeight: 200,
         imageAlt: 'Custom image',
         title: "Om Swastyastu",
-        text: "PASEMAYA BEM FDA 2024 \n\n Kesempatan terbuka untuk semua! Daftarkan dirimu sekarang dan tunjukkan bakatmu!",
+        html: "<b>PASEMAYA BEM FDA 2024</b></br><p>Berbagai lomba terbuka untuk semua! Daftarkan dirimu sekarang dan tunjukkan bakatmu!</p>",
         confirmButtonText: 'Daftar Sekarang',
-        
     });
 
     setTimeout(mulai, 900); // Pastikan fungsi 'mulai' didefinisikan

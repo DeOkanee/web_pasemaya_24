@@ -99,7 +99,7 @@ height: auto;
   width: 100%;
   max-width: 900px;
   overflow: hidden;
-  margin-top: 8%;
+  margin-top: 7%;
 }
 
 .pamflet {
@@ -363,7 +363,7 @@ footer {
     font-size: 11px;
   }
   .container {
-    margin-top: 25%;
+    margin-top: 22%;
     flex-direction: column;
     width: 80%;
   }
