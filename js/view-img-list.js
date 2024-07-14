@@ -14,7 +14,7 @@ var imgCaption = document.getElementById("imgCaption");
 var images = document.querySelectorAll('.lomba-list img');
 images.forEach(function(image) {
   image.addEventListener('click', function() {
-    imgModal.style.display = "block";
+    imgModal.style.display = "block"; // Use flex to center image
     modalImg.src = this.src;
     imgCaption.innerHTML = this.nextElementSibling.querySelector('h2').innerHTML;
   });

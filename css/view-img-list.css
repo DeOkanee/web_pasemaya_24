@@ -1,6 +1,5 @@
 /* Gaya untuk modal gambar */
 .img-modal {
-    display: none; /* Hide modal by default */
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -13,6 +12,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    display: none;
   }
   
   /* Gaya untuk gambar dalam modal */
@@ -61,7 +61,7 @@
     }
     .img-close {
         position: absolute;
-        top: 45px;
+        top: 5px;
         right: 45px;
         color: #fff;
         font-size: 40px;
