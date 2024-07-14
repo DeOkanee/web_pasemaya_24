@@ -1,0 +1,88 @@
+/* Gaya untuk modal gambar */
+.img-modal {
+    display: none; /* Hide modal by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.719);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  /* Gaya untuk gambar dalam modal */
+  .img-modal-content {
+    margin-top: 7%;
+    max-width: 90%; /* Max width of image */
+    max-height: 80%; /* Max height of image */
+  
+  }
+  
+  /* Gaya untuk tombol close */
+  .img-close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .img-close:hover,
+  .img-close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Gaya untuk caption gambar */
+  .img-caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+    font-size: 20px;
+  }
+  @media (max-width: 767px) {
+    .img-modal-content {
+        margin-top: 50%;
+      max-width: 80%; /* Adjust size for small screens */
+      max-height: 70%; /* Adjust size for small screens */
+    }
+    .img-close {
+        position: absolute;
+        top: 45px;
+        right: 45px;
+        color: #fff;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+  }
+  @media (max-width: 440px) {
+    .img-modal-content {
+        margin-top: 50%;
+      max-width: 80%; /* Adjust size for small screens */
+      max-height: 70%; /* Adjust size for small screens */
+    }
+    .img-close {
+        position: absolute;
+        top: 25px;
+        right: 45px;
+        color: #fff;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+  }
+  
