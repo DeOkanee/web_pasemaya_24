@@ -64,8 +64,10 @@
   .contact {
     width: 100%;
     display: flex;
+    background: none;
     flex-direction: column;
   }
+
   .lokasi-kegiatan {
     text-align: center;
     width: 70%;
