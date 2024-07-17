@@ -25,6 +25,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Dewata";
+  src: url("../font/Dewata.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 /* 
 body {
   font-family: 'Bonello', sans-serif;
@@ -100,6 +106,7 @@ header {
   max-width: 900px;
   overflow: hidden;
   margin-top: 7%;
+ 
 }
 
 .pamflet {
@@ -113,8 +120,10 @@ header {
 .pamflet img {
   max-width: 100%; /* Maksimum lebar gambar adalah 100% dari parentnya */
   height: auto;
-  box-shadow: 0 0 16px rgba(0, 0, 0, 0.438);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.555);
+
 }
+
 
 .text {
   flex: 1;

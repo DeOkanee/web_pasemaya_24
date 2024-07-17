@@ -1,18 +1,36 @@
 /*contact*/
 .contact {
+  margin-top: 50px;
+  padding-top: 40px;
+  padding-bottom: 80px;
   width: 100%;
+  display: flex;
+  background-color: rgb(226, 226, 226);
+  justify-content: center;
+  align-items: center;
 }
+.lokasi-kegiatan {
+  text-align: center;
+  width: 50%;
+}
+.lokasi-kegiatan h1 {
+  font-size: 20px;
+  margin: 0;
 
+  margin-bottom: 10px;
+  color: rgb(26, 26, 26);
+}
+.lokasi-kegiatan iframe {
+  width: 70%;
+}
 .contact-area {
-  max-width: 1200px;
-  margin: 20px auto;
+  width: 50%;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
 }
 
 .contact-box {
-  width: 30%;
+  width: 60%;
   background-color: #fff;
   padding: 20px;
   margin: 10px;
@@ -42,31 +60,82 @@
 .contact-link:hover {
   background-color: #2980b9;
 }
-@media (max-width: 600px) {
-  .contact-box {
+@media (max-width: 767px) {
+  .contact {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .lokasi-kegiatan {
+    text-align: center;
+    width: 70%;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.158);
+  }
+  .lokasi-kegiatan h1 {
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 10px;
+    color: rgb(26, 26, 26);
+  }
+  .lokasi-kegiatan iframe {
+    width: auto;
+  }
+  .contact-area {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .contact-box {
+    width: 70%;
   }
   .contact h1 {
     text-align: center;
     font-size: 18px;
     margin-top: 10px;
-  }
-  .contact-box {
-    width: 80%;
-    padding: 18px;
   }
 }
 @media (max-width: 440px) {
-  .contact-box {
-    width: 100%;
+  .contact {
+    background: none;
   }
+  .lokasi-kegiatan {
+    text-align: center;
+    width: 70%;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.158);
+  }
+  .lokasi-kegiatan h1 {
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 10px;
+    color: rgb(26, 26, 26);
+  }
+  .lokasi-kegiatan iframe {
+    width: 250px;
+  }
+  .contact-area {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .contact-box {
+    width: 70%;
+  }
+
   .contact h1 {
     text-align: center;
     font-size: 18px;
     margin-top: 10px;
-  }
-  .contact-box {
-    width: 80%;
-    padding: 18px;
   }
 }
