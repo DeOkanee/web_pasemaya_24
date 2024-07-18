@@ -52,7 +52,15 @@ height: auto;
   max-width: 1000px;
   margin: 0 auto;
 }
-#data-terimpan {
+
+#data-tersimpan h1{
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+#data-tersimpan h2{
+  font-size: 25px;
+}
+#data-tersimpan {
 
   margin-top: 100px;
   text-align: center;
@@ -62,7 +70,7 @@ height: auto;
   margin-right: 20px;
   border-radius: 10px;
 }
-#data-terimpan a {
+#data-tersimpan a {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -73,7 +81,7 @@ height: auto;
   font-size: 12px;
   text-decoration: none;
 }
-#data-terimpan a:hover{
+#data-tersimpan a:hover{
   background-color: #0056b3;
 }
 .button-group {

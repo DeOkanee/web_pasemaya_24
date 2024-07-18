@@ -25,10 +25,13 @@
   
   /* Gaya untuk tombol close */
   .img-close {
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    width: 50px;
     position: absolute;
     top: 15px;
     right: 35px;
-    color: #fff;
+    color: #a10b0b;
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
@@ -36,7 +39,7 @@
   
   .img-close:hover,
   .img-close:focus {
-    color: #bbb;
+    color: #e04242;
     text-decoration: none;
     cursor: pointer;
   }
@@ -55,34 +58,42 @@
   }
   @media (max-width: 767px) {
     .img-modal-content {
-        margin-top: 50%;
+      margin-top: 50%;
       max-width: 80%; /* Adjust size for small screens */
       max-height: 70%; /* Adjust size for small screens */
-    }
-    .img-close {
-        position: absolute;
-        top: 20px;
-        right: 45px;
-        color: #fff;
-        font-size: 40px;
-        font-weight: bold;
-        transition: 0.3s;
-      }
+  }
+  .img-close {
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    width: 50px;
+      position: absolute;
+      top: 120px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #b90e0e;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+  }
   }
   @media (max-width: 440px) {
     .img-modal-content {
-        margin-top: 50%;
+      margin-top: 50%;
       max-width: 80%; /* Adjust size for small screens */
       max-height: 70%; /* Adjust size for small screens */
-    }
-    .img-close {
-        position: absolute;
-        top: 25px;
-        right: 45px;
-        color: #fff;
-        font-size: 40px;
-        font-weight: bold;
-        transition: 0.3s;
-      }
+  }
+  .img-close {
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    width: 50px;
+      position: absolute;
+      top: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #b90e0e;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+  }
   }
   
