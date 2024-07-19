@@ -1,200 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PASEMAYA BEM FDA 24</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="/img/ICON BEM FDA.png" type="image/x-icon" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-</head>
-<body>
-<header>
-    <div class="logo-left" onclick="window.open('https://uhnsugriwa.ac.id/');" style="cursor: pointer">
+  </head>
+  <body>
+    <header>
+      <div
+        class="logo-left"
+        onclick="window.open('https://uhnsugriwa.ac.id/');"
+        style="cursor: pointer"
+      >
         <img src="/img/LOGO UHN-01.png" alt="Logo Left" />
-    </div>
-    <div class="title">
+      </div>
+      <div class="title">
         <h1>
-            <img src="/img/ICON BEM FDA.png" alt="BEM FDA" class="icon-bem" />
-            BEM FDA OFFICIAL
+          <img src="/img/ICON BEM FDA.png" alt="BEM FDA" class="icon-bem" />
+          BEM FDA OFFICIAL
         </h1>
-    </div>
-    <div class="logo-right" onclick="window.open('https://www.instagram.com/orkemas_fda/');" style="cursor: pointer">
+      </div>
+      <div
+        class="logo-right"
+        onclick="window.open('https://www.instagram.com/orkemas_fda/');"
+        style="cursor: pointer"
+      >
         <img src="/img/LOGO ORKEMAS.png" alt="Logo Right" />
-    </div>
-</header>
+      </div>
+    </header>
 
-<section id="form-section" class="kotak">
-    <div class="text">
+    <section id="form-section" class="kotak">
+      <div class="text">
         <h2>Pendaftaran Lomba Ogoh-ogoh-mini</h2>
-    </div>
+      </div>
 
-    <form id="form" class="container m-4 pl-4" action="https://script.google.com/macros/s/AKfycby0dTPh03uE-WSSVp_-AxHsylpKfiq6WCNLIH6fy7zP6qP9jQt3EerVu0HV6Skpw1fM2g/exec"
-          method="post" enctype="multipart/form-data" onsubmit="handleSubmit(event)">
-
+      <form
+        id="form"
+        class="container m-4 pl-4"
+        action="https://script.google.com/macros/s/AKfycby0dTPh03uE-WSSVp_-AxHsylpKfiq6WCNLIH6fy7zP6qP9jQt3EerVu0HV6Skpw1fM2g/exec"
+        method="post"
+        enctype="multipart/form-data"
+        onsubmit="handleSubmit(event)"
+      >
         <div class="field">
-            <label class="label">Nama</label>
-            <div class="control">
-                <input class="input" type="text" placeholder="Name Lengkap" name="Name" id="name" />
-            </div>
+          <label class="label">Nama</label>
+          <div class="control">
+            <input
+              class="input"
+              type="text"
+              placeholder="Nama Lengkap"
+              name="Name"
+              id="name"
+            />
+          </div>
         </div>
 
         <div class="field">
-            <label class="label">Email</label>
-            <div class="control">
-                <input class="input" type="email" placeholder="Email Aktif" name="Email" id="email" />
-            </div>
+          <label class="label">Email</label>
+          <div class="control">
+            <input
+              class="input"
+              type="email"
+              placeholder="Email Aktif"
+              name="Email"
+              id="email"
+            />
+          </div>
         </div>
 
         <div class="field">
-            <label class="label">Jenjang</label>
-            <div class="control">
-                <label class="radio">
-                    <input type="radio" name="Jenjang" value="SD" id="Jenjang_sd" disabled /> SD
-                </label>
-                <br/>
-                <label class="radio">
-                    <input type="radio" name="Jenjang" value="SMP" id="Jenjang_smp" disabled/> SMP
-                </label>
-                <br/>
-                <label class="radio">
-                    <input type="radio" name="Jenjang" value="SMA / SMK" id="Jenjang_sma_smk" disabled/> SMA / SMK
-                </label>
-                <br/>
-                <label class="radio">
-                    <input type="radio" name="Jenjang" value="Mahasiswa" id="Jenjang_mahasiswa" disabled/> Mahasiswa
-                </label>
-                <br/>
-                <label class="radio">
-                    <input type="radio" name="Jenjang" value="Umum" id="Jenjang_umum" /> Umum
-                </label>
-            </div>
+          <label class="label">Jenjang</label>
+          <div class="control">
+            <label class="radio">
+              <input
+                type="radio"
+                name="Jenjang"
+                value="SD"
+                id="Jenjang_sd"
+                disabled
+              />
+              SD
+            </label>
+            <br />
+            <label class="radio">
+              <input
+                type="radio"
+                name="Jenjang"
+                value="SMP"
+                id="Jenjang_smp"
+                disabled
+              />
+              SMP
+            </label>
+            <br />
+            <label class="radio">
+              <input
+                type="radio"
+                name="Jenjang"
+                value="SMA / SMK"
+                id="Jenjang_sma_smk"
+                disabled
+              />
+              SMA / SMK
+            </label>
+            <br />
+            <label class="radio">
+              <input
+                type="radio"
+                name="Jenjang"
+                value="Mahasiswa"
+                id="Jenjang_mahasiswa"
+                disabled
+              />
+              Mahasiswa
+            </label>
+            <br />
+            <label class="radio">
+              <input
+                type="radio"
+                name="Jenjang"
+                value="Umum"
+                id="Jenjang_umum"
+              />
+              Umum
+            </label>
+          </div>
         </div>
 
         <div class="field">
-            <label class="label">Gender</label>
-            <div class="control">
-                <label class="radio">
-                    <input type="radio" name="Gender" value="Laki-laki" id="gender_laki" /> Laki-laki
-                </label>
-                <br/>
-                <label class="radio">
-                    <input type="radio" name="Gender" value="Perempuan" id="gender_perempuan" /> Perempuan
-                </label>
-            </div>
+          <label class="label">Gender</label>
+          <div class="control">
+            <label class="radio">
+              <input
+                type="radio"
+                name="Gender"
+                value="Laki-laki"
+                id="gender_laki"
+              />
+              Laki-laki
+            </label>
+            <br />
+            <label class="radio">
+              <input
+                type="radio"
+                name="Gender"
+                value="Perempuan"
+                id="gender_perempuan"
+              />
+              Perempuan
+            </label>
+          </div>
         </div>
         <div class="field">
-            <label class="label">Asal Sekolah</label>
-            <div class="control">
-                <textarea rows="1" class="textarea" placeholder="Asal Sekolah" name="Asal_sekolah" id="alamat" disabled></textarea>
-            </div>
+          <label class="label">Asal Sekolah</label>
+          <div class="control">
+            <textarea
+              rows="1"
+              class="textarea"
+              placeholder="Asal Sekolah"
+              name="Asal_sekolah"
+              id="alamat"
+              disabled
+            ></textarea>
+          </div>
         </div>
 
         <div class="field">
-            <label class="label">Alamat</label>
-            <div class="control">
-                <textarea rows="4" class="textarea" placeholder="Alamat Lengkap" name="Alamat" id="alamat"></textarea>
-            </div>
+          <label class="label">Alamat</label>
+          <div class="control">
+            <textarea
+              rows="4"
+              class="textarea"
+              placeholder="Alamat Lengkap"
+              name="Alamat"
+              id="alamat"
+            ></textarea>
+          </div>
         </div>
 
         <div class="field">
-            <label class="label">Nomor WhatsApp</label>
-            <div class="control">
-                <span class="prefix"></span>
-                <input class="input input-prefix" type="text"  placeholder="Nomor WhatsApp Aktif" name="WhatsApp" id="whatsapp" />
-            </div>
+          <label class="label">Nomor WhatsApp</label>
+          <div class="control">
+            <span class="prefix"></span>
+            <input
+              class="input input-prefix"
+              type="text"
+              placeholder="Nomor WhatsApp Aktif"
+              name="WhatsApp"
+              id="whatsapp"
+            />
+          </div>
         </div>
 
         <script>
-            document.addEventListener("DOMContentLoaded", () => {
-                const whatsappInput = document.getElementById("whatsapp");
-                whatsappInput.value = "+62";
+          document.addEventListener("DOMContentLoaded", () => {
+            const whatsappInput = document.getElementById("whatsapp");
+            whatsappInput.value = "+62";
 
-                whatsappInput.addEventListener("focus", () => {
-                    if (whatsappInput.value === "+62") {
-                        whatsappInput.setSelectionRange(3, 3); // Posisikan kursor setelah +62
-                    }
-                });
-
-                whatsappInput.addEventListener("input", () => {
-                    if (!whatsappInput.value.startsWith("+62")) {
-                        whatsappInput.value = "+62";
-                    }
-                });
+            whatsappInput.addEventListener("focus", () => {
+              if (whatsappInput.value === "+62") {
+                whatsappInput.setSelectionRange(3, 3); // Posisikan kursor setelah +62
+              }
             });
+
+            whatsappInput.addEventListener("input", () => {
+              if (!whatsappInput.value.startsWith("+62")) {
+                whatsappInput.value = "+62";
+              }
+            });
+          });
         </script>
 
         <div class="field is-grouped">
-            <div class="control">
-                <button class="button is-primary" type="submit" id="submit-button">Kirim</button>
-            </div>
+          <div class="control">
+            <button class="button is-primary" type="submit" id="submit-button">
+              Kirim
+            </button>
+          </div>
         </div>
-    </form>
-</section>
+      </form>
+    </section>
 
-<section id="success-section" class="kotak" style="display: none; margin-top: 50px">
-    <div id="data-tersimpan">
+    <section
+      id="success-section"
+      class="kotak"
+      style="display: none; margin-top: 50px"
+    >
+      <div id="data-tersimpan">
         <h1>Pendaftaran Lomba Ogoh-ogoh-mini</h1>
         <h2>Data Anda Berhasil Dikirim!</h2>
         <div class="button-group">
-            <a  href="path/to/ketentuan.docx" class="button-download" download="ketentuan.docx">Download <br/>Syarat & Ketentuan</a>
+          <a
+            href="path/to/ketentuan.docx"
+            class="button-download"
+            download="ketentuan.docx"
+            >Download <br />Syarat & Ketentuan</a
+          >
 
-            <a href="/index.html" class="button is-primary " style="background-color: rgb(255, 174, 0);">Kembali</a>
-           
-            <button style="display: none;" class="button is-primary" onclick="handleAnother()">Kirim data ulang</button>
+          <a
+            href="/index.html"
+            class="button is-primary"
+            style="background-color: rgb(255, 174, 0)"
+            >Kembali</a
+          >
+
+          <button
+            style="display: none"
+            class="button is-primary"
+            onclick="handleAnother()"
+          >
+            Kirim data ulang
+          </button>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<script>
-    const form = document.getElementById("form");
-    const Toast = Swal.mixin({
+    <script>
+      const form = document.getElementById("form");
+      const Toast = Swal.mixin({
         toast: true,
         position: "top-end",
         showConfirmButton: false,
         timer: 3000,
         timerProgressBar: true,
         didOpen: (toast) => {
-            toast.onmouseenter = Swal.stopTimer;
-            toast.onmouseleave = Swal.resumeTimer;
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
         },
-    });
+      });
 
-    function setCookie(name, value, days) {
+      function setCookie(name, value, days) {
         const d = new Date();
         d.setTime(d.getTime() + days * 24 * 60 * 60 * 1000);
         const expires = "expires=" + d.toUTCString();
         document.cookie = name + "=" + value + ";" + expires + ";path=/";
-    }
+      }
 
-    function getCookie(name) {
+      function getCookie(name) {
         const cname = name + "=";
         const decodedCookie = decodeURIComponent(document.cookie);
         const ca = decodedCookie.split(";");
         for (let i = 0; i < ca.length; i++) {
-            let c = ca[i];
-            while (c.charAt(0) == " ") {
-                c = c.substring(1);
-            }
-            if (c.indexOf(cname) == 0) {
-                return c.substring(cname.length, c.length);
-            }
+          let c = ca[i];
+          while (c.charAt(0) == " ") {
+            c = c.substring(1);
+          }
+          if (c.indexOf(cname) == 0) {
+            return c.substring(cname.length, c.length);
+          }
         }
         return "";
-    }
+      }
 
-    function checkFormSubmission() {
+      function checkFormSubmission() {
         const formSubmitted = getCookie("formSubmitted");
         if (formSubmitted) {
-            document.getElementById("form-section").style.display = "none";
-            document.getElementById("success-section").style.display = "block";
+          document.getElementById("form-section").style.display = "none";
+          document.getElementById("success-section").style.display = "block";
         }
-    }
+      }
 
-    function handleSubmit(event) {
+      function handleSubmit(event) {
         event.preventDefault(); // Prevent the default form submission
 
         const submitButton = document.getElementById("submit-button");
@@ -203,75 +318,81 @@
         const formData = new FormData(form);
 
         // Validasi Jenjang dan Gender
-        const jenjangChecked = document.querySelector('input[name="Jenjang"]:checked');
-        const genderChecked = document.querySelector('input[name="Gender"]:checked');
-        
+        const jenjangChecked = document.querySelector(
+          'input[name="Jenjang"]:checked'
+        );
+        const genderChecked = document.querySelector(
+          'input[name="Gender"]:checked'
+        );
+
         if (!jenjangChecked || !genderChecked) {
-            Toast.fire({
-                icon: "error",
-                title: "Data tidak boleh kosong",
-            });
-            submitButton.textContent = "Kirim"; // Kembalikan teks tombol ke "Kirim"
-            return;
+          Toast.fire({
+            icon: "error",
+            title: "Data tidak boleh kosong",
+          });
+          submitButton.textContent = "Kirim"; // Kembalikan teks tombol ke "Kirim"
+          return;
         }
 
         // Validasi seluruh field tidak kosong
         let valid = true;
         for (let value of formData.values()) {
-            if (!value) {
-                valid = false;
-                break;
-            }
+          if (!value) {
+            valid = false;
+            break;
+          }
         }
 
         if (!valid) {
-            Toast.fire({
-                icon: "error",
-                title: "Data tidak boleh kosong",
-            });
-            submitButton.textContent = "Kirim"; // Kembalikan teks tombol ke "Kirim"
-            return;
+          Toast.fire({
+            icon: "error",
+            title: "Data tidak boleh kosong",
+          });
+          submitButton.textContent = "Kirim"; // Kembalikan teks tombol ke "Kirim"
+          return;
         }
 
         fetch(form.action, {
-            method: "POST",
-            body: formData,
+          method: "POST",
+          body: formData,
         })
-        .then((response) => {
+          .then((response) => {
             if (response.ok) {
-                setCookie("formSubmitted", "true", 1);
-                Toast.fire({
-                    icon: "success",
-                    title: "Data success dikirim",
-                }).then(() => {
-                    document.getElementById("form-section").style.display = "none";
-                    document.getElementById("success-section").style.display = "block";
-                });
+              setCookie("formSubmitted", "true", 1);
+              Toast.fire({
+                icon: "success",
+                title: "Data success dikirim",
+              }).then(() => {
+                document.getElementById("form-section").style.display = "none";
+                document.getElementById("success-section").style.display =
+                  "block";
+              });
             } else {
-                Toast.fire({
-                    icon: "error",
-                    title: "Gagal mengirim data. Coba lagi.",
-                });
+              Toast.fire({
+                icon: "error",
+                title: "Gagal mengirim data. Coba lagi.",
+              });
             }
             submitButton.textContent = "Kirim"; // Kembalikan teks tombol ke "Kirim"
-        })
-        .catch((error) => {
+          })
+          .catch((error) => {
             Toast.fire({
-                icon: "error",
-                title: "Terjadi kesalahan. Coba lagi.",
+              icon: "error",
+              title: "Terjadi kesalahan. Coba lagi.",
             });
             submitButton.textContent = "Kirim"; // Kembalikan teks tombol ke "Kirim"
-        });
-    }
+          });
+      }
 
-    function handleAnother() {
+      function handleAnother() {
         document.getElementById("form-section").style.display = "block";
         document.getElementById("success-section").style.display = "none";
         document.getElementById("form").reset();
-        document.cookie = "formSubmitted=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    }
+        document.cookie =
+          "formSubmitted=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+      }
 
-    document.addEventListener("DOMContentLoaded", checkFormSubmission);
-</script>
-</body>
+      document.addEventListener("DOMContentLoaded", checkFormSubmission);
+    </script>
+  </body>
 </html>
