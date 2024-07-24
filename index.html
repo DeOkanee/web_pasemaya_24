@@ -7,11 +7,17 @@
       name="keywords"
       content="Pasemaya BEM FDA 2024, Pasemaya, BEM FDA, BEM FDA 2024, acara Pasemaya, event Pasemaya, kegiatan BEM FDA"
     />
-    <meta property="og:title" content="PASEMAYA BEM FDA 24">
-    <meta property="og:description" content="Pasemaya Palgelaran Seni Agama dan Budaya Badan Eksekutif Mahasiswa Tahun 2024">
-    <meta property="og:image" content="https://i.ibb.co.com/R2QVCgV/ICON-BEM-FDA.png">
-    <meta property="og:url" content="https://web-pasemaya-24.vercel.app/">
-    <meta property="og:site_name" content="PASEMAYA BEM FDA 24">
+    <meta property="og:title" content="PASEMAYA BEM FDA 24" />
+    <meta
+      property="og:description"
+      content="Pasemaya Pagelaran Seni Agama dan Budaya Badan Eksekutif Mahasiswa Tahun 2024"
+    />
+    <meta
+      property="og:image"
+      content="https://i.ibb.co.com/R2QVCgV/ICON-BEM-FDA.png"
+    />
+    <meta property="og:url" content="https://web-pasemaya-24.vercel.app/" />
+    <meta property="og:site_name" content="PASEMAYA BEM FDA 24" />
     <title>PASEMAYA BEM FDA 24</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/cp.css" />
@@ -19,11 +25,14 @@
     <link rel="stylesheet" href="css/icon-informasi.css" />
     <link rel="stylesheet" href="css/view-img-list.css" />
     <link rel="stylesheet" href="css/musik.css" />
+    <link rel="stylesheet" href="css/benefit.css" />
     <link rel="icon" href="img/ICON BEM FDA.png" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
     />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.min.js"></script>
+
   </head>
   <body>
     <!-- Modal untuk melihat gambar -->
@@ -96,7 +105,7 @@
               <div class="ketentuan-modal" id="ketentuan-1">
                 <div class="ketentuan-content">
                   <span class="close">&times;</span>
-                  <h3>Ketentuan Lomba Rindik</h3>
+                  <h3>Syarat & Ketentuan <br />&nbsp;Lomba Rindik</h3>
                   <ul>
                     <li>
                       Lomba harus mengikuti tema yang telah ditentukan oleh
@@ -160,7 +169,7 @@
               <div class="ketentuan-modal" id="ketentuan-2">
                 <div class="ketentuan-content">
                   <span class="close">&times;</span>
-                  <h3>Ketentuan Lomba 2</h3>
+                  <h3>Syarat & Ketentuan <br />&nbsp;Lomba Tapel-ogoh-ogoh</h3>
                   <ul>
                     <li>
                       Lomba harus mengikuti tema yang telah ditentukan oleh
@@ -223,7 +232,7 @@
               <div class="ketentuan-modal" id="ketentuan-3">
                 <div class="ketentuan-content">
                   <span class="close">&times;</span>
-                  <h3>Ketentuan Lomba 3</h3>
+                  <h3>Syarat & Ketentuan <br />&nbsp;Lomba Tari Puspanjali</h3>
                   <ul>
                     <li>
                       Lomba harus mengikuti tema yang telah ditentukan oleh
@@ -286,7 +295,7 @@
               <div class="ketentuan-modal" id="ketentuan-4">
                 <div class="ketentuan-content">
                   <span class="close">&times;</span>
-                  <h3>Ketentuan Lomba 4</h3>
+                  <h3>Syarat & Ketentuan <br />&nbsp;Lomba Ogoh-ogoh-mini</h3>
                   <ul>
                     <li>
                       Lomba harus mengikuti tema yang telah ditentukan oleh
@@ -332,7 +341,23 @@
         </div>
       </div>
     </section>
-
+    <section>
+      <div class="benefit">
+          <h1>⬐ Benefit ⬎</h1>
+          <div class="benefit-elemen">
+              <div class="benefit-item">
+                  <img src="https://img.icons8.com/emoji/96/000000/trophy-emoji.png" alt="Piala">
+                  <h4>Piala</h4>
+                  <p>Penghargaan atas prestasi yang telah dicapai.</p>
+              </div>
+              <div class="benefit-item">
+                  <img src="img/SERIFIKAT.png" alt="Sertifikat" style="background-color: white">
+                  <h4>Sertifikat</h4>
+                  <p>Pengesahan resmi atas keterampilan yang diperoleh.</p>
+              </div>
+          </div>
+      </div>
+  </section>
     <section class="contact" id="contact-panitia">
       <div class="lokasi-kegiatan">
         <h1>Lokasi kegiatan</h1>
@@ -410,7 +435,7 @@
       <ul>
         <li>Lomba dibuka secara umum seBali</li>
         <li>Acara dimulai pukul 09.00 WIB</li>
-        <li>Pendaftaran dibuka hingga 25 Agustus 2024</li>
+        <li>kegiatan tanggal 25 Agustus 2024</li>
         <li>
           Untuk informasi lebih lanjut,<a
             class="nav-link click-scroll"
@@ -467,12 +492,12 @@
     </footer>
     <!-- Konten SOUND -->
     <audio
-    id="background-music"
-    src="sound/Backsound Gamelan Bali.MP3"
-    autoplay
-    loop
-    muted
-  ></audio>
+      id="background-music"
+      src="sound/Backsound Gamelan Bali.MP3"
+      autoplay
+      loop
+      muted
+    ></audio>
     <button id="music-control" class="floating-btn">⏸️</button>
     <!--Icon informasi SC-->
     <script>
@@ -486,6 +511,7 @@
       }
     </script>
     <!--Icon informasi SC-->
+    <script src="js/benefit.js"></script>
     <script src="js/musik.js"></script>
     <script src="js/view-img-list.js"></script>
     <script src="js/contact.js"></script>

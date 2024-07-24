@@ -1,0 +1,85 @@
+.benefit {
+    text-align: center;
+    padding: 20px 0;
+}
+.benefit h1 {
+    color: white;
+}
+.benefit-elemen {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    margin: 20px;
+}
+.benefit-item {
+    background-color: white;
+    max-width: 500px;
+    flex: 1 1 45%;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+.benefit-item:hover {
+    transform: scale(1.05);
+}
+.benefit-item img {
+    max-width: 100px;
+}
+.benefit-item h4 {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 767px) {
+    .benefit {
+        margin-top: 30px;
+    }
+    .benefit-item {
+        max-width: 300px;
+        flex: 1 1 100%;
+    }
+    .benefit-item img {
+        margin-bottom: -20px;
+    }
+    .benefit-item h4 {
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+}
+@media (max-width: 440px) {
+    .benefit {
+        margin-top: 30px;
+    }
+    .benefit-item img {
+        margin-bottom: -20px;
+    }
+    .benefit-item {
+        max-width: 270px;
+    }
+    .benefit-item h4 {
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+    .benefit-item {
+        flex: 1 1 100%;
+    }
+}
+
+.confetti {
+    position: absolute;
+    top: -100px;
+    width: 50px;
+    height: 50px;
+    pointer-events: none;
+    animation: fall 3s linear infinite;
+    z-index: 9999;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
