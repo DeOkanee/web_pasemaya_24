@@ -1,5 +1,18 @@
-{
-    "rewrites":  [
-        {"source": "/(.*)", "destination": "/"}
-     ]
- }
+
+ {
+    "rewrites": [
+      {
+        "source": "/Lomba-lomba/Tari-Margapati/form-tari-margapati.html",
+        "destination": "/"
+      },
+      {
+        "source": "/Lomba-lomba/Tari-puspanjali/form-tari-puspanjali.html",
+        "destination": "/"
+      },
+      {
+        "source": "/Lomba-lomba/Photography/form-Photography.html",
+        "destination": "/"
+      }
+    ]
+  }
+  
