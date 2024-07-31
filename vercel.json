@@ -1,17 +1,19 @@
-
- {
-    "rewrites": [
+{
+    "redirects": [
       {
         "source": "/Lomba-lomba/Tari-Margapati/form-tari-margapati.html",
-        "destination": "/"
+        "destination": "/",
+        "statusCode": 301
       },
       {
         "source": "/Lomba-lomba/Tari-puspanjali/form-tari-puspanjali.html",
-        "destination": "/"
+        "destination": "/",
+        "statusCode": 301
       },
       {
         "source": "/Lomba-lomba/Photography/form-Photography.html",
-        "destination": "/"
+        "destination": "/",
+        "statusCode": 301
       }
     ]
   }

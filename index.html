@@ -662,6 +662,24 @@
         </div>
       </div>
     </footer>
+    <div id="content" style="display: none;"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mengambil URL dari query parameter atau hash
+            const urlParams = new URLSearchParams(window.location.search);
+            const page = urlParams.get('page') || '';
+
+            // Menampilkan konten yang sesuai
+            const content = {
+                'Tari-Margapati': '<h1>Konten Tari Margapati</h1>',
+                'Tari-puspanjali': '<h1>Konten Tari Puspanjali</h1>',
+                'Photography': '<h1>Konten Photography</h1>',
+            };
+
+            document.getElementById('content').innerHTML = content[page] || '<h1>Halaman Utama</h1>';
+        });
+    </script>
     <!-- Konten SOUND -->
     <audio id="background-music" src="#" autoplay loop></audio>
     <button id="music-control" class="floating-btn" style="display: none">
