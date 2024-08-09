@@ -99,7 +99,7 @@
           <div class="info">
             <h2>Lomba Tari Margapati</h2>
             <div class="buttons">
-              <a href="Lomba-lomba/Tari-Margapati/form-tari-margapati.html"
+              <a id="Daftar1" href="Lomba-lomba/Tari-Margapati/form-tari-margapati.html"
                 >Daftar</a
               >
               <a
@@ -194,7 +194,7 @@
           <div class="info">
             <h2>Lomba Tari Puspanjali</h2>
             <div class="buttons">
-              <a href="Lomba-lomba/Tari-puspanjali/form-tari-puspanjali.html"
+              <a id="Daftar2" href="Lomba-lomba/Tari-puspanjali/form-tari-puspanjali.html"
                 >Daftar</a
               >
               <a
@@ -289,7 +289,7 @@
           <div class="info">
             <h2>Lomba Photography</h2>
             <div class="buttons">
-              <a href="Lomba-lomba/Photography/form-Photography.html">Daftar</a>
+              <a id="Daftar3" href="Lomba-lomba/Photography/form-Photography.html">Daftar</a>
               <a
                 class="ketentuan-btn"
                 data-lomba="3"
@@ -678,6 +678,36 @@
         }
       }
     </script>
+    <script>
+      // Pesan untuk lomba yang sudah ditutup
+      const closedLombaMessage = 'Pendaftaran Lomba Tari Puspanjali Sudah Ditutup. Silakan Daftar untuk Lomba Lainnya.';
+  
+      // Fungsi untuk menampilkan alert jika lomba ditutup
+      function showClosedMessage(event) {
+          event.preventDefault(); // Mencegah perilaku default link
+          Swal.fire({
+              title: 'Informasi',
+              text: closedLombaMessage,
+              icon: 'info',
+              confirmButtonText: 'Oke'
+          });
+      }
+  
+      // Menambahkan event listener hanya pada tombol yang lombanya sudah ditutup
+      document.getElementById('Daftar2').addEventListener('click', showClosedMessage);
+  
+      // Fungsi untuk tombol yang masih aktif
+      function handleActiveLombaClick(event) {
+          // Di sini bisa kamu tambahkan logika untuk membuka halaman pendaftaran atau mengarahkan ke halaman lain
+          // Contoh sederhana:
+          window.location.href = event.target.href; 
+      }
+  
+      // Menambahkan event listener pada tombol yang lombanya masih bisa diakses
+      document.getElementById('Daftar1').addEventListener('click', handleActiveLombaClick);
+      document.getElementById('Daftar3').addEventListener('click', handleActiveLombaClick);
+  </script>
+  
     <!--Icon informasi SC-->
     <script src="js/benefit.js"></script>
     <script src="js/musik.js"></script>
