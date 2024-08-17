@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         imageAlt: 'Custom image',
         title: "Om Swastyastu",
         html: "<b>PASEMAYA BEM FDA 2024</b></br><p>Berbagai lomba terbuka untuk semua! Daftarkan dirimu sekarang dan tunjukkan bakatmu!</p>",
-        footer: "Tinggal lomba Tari Margapati yang terbuka! Segera daftar sebelum terlambat!",
+        footer: "Tinggal lomba Tari Puspanjali yang terbuka! Segera daftar sebelum terlambat!",
         confirmButtonText: 'Daftar Sekarang',
     });
 
