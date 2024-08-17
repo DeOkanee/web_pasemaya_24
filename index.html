@@ -64,13 +64,28 @@
       </div>
     </header>
     <div class="container">
-      <div class="pamflet">
+      <div class="pamflet" style="position: relative; display: inline-block;">
         <img
-          src="img/PAMFLET-PASEMAYA--24-.jpg"
-          alt="Pamflet"
-          style="cursor: pointer"
+            src="img/PAMFLET-PASEMAYA--24-.jpg"
+            alt="Pamflet"
+            style="cursor: pointer; width: 100%; height: auto; opacity: 0.6;"
         />
-      </div>
+        <div style="
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: rgb(255, 0, 0);
+            padding: 10px 20px;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 5px;
+        ">
+            TUTUP
+        </div>
+    </div>
+    
       <div class="text">
         <h1>PASEMAYA 2024</h1>
         <p>
@@ -208,13 +223,33 @@
           </div>
         </div>
 
-        <div class="lomba-list">
+        <div
+          class="lomba-list"
+          style="position: relative; display: inline-block"
+        >
           <img
             src="img-lomba-lomba/Tari Puspanjali.jpg"
             alt="Lomba Tari Puspanjali"
-            style="cursor: pointer"
+            style="cursor: pointer; width: 100%; height: auto; opacity: 0.7"
           />
+          <span
+            class="text-overlay"
+            style="
+              position: absolute;
+              top: 30%;
+              left: 50%;
+              transform: translate(-50%, -50%);
 
+              color: rgb(255, 0, 0);
+              padding: 9px 10px;
+              border-radius: 5px;
+              font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+                sans-serif;
+              font-size: 20px;
+            "
+          >
+            Tutup
+          </span>
           <div class="info">
             <h2>Lomba Tari Puspanjali</h2>
             <div class="buttons">
@@ -749,17 +784,30 @@
     </script>
     <script>
       // Pesan untuk lomba yang sudah ditutup
-      const closedTariMessage =
-        "Pendaftaran Lomba Tari Margapati Sudah Ditutup. Silakan Daftar untuk Lomba Lainnya.";
+      const closedMargapatiMessage =
+        "Pendaftaran Lomba Tari Margapati Sudah Ditutup.";
+      const closedPuspanjaliMessage =
+        "Pendaftaran Lomba Tari Puspanjali Sudah Ditutup.";
       const closedPhotographyMessage =
-        "Pendaftaran Lomba Photography Sudah Ditutup. Silakan Daftar untuk Lomba Lainnya.";
+        "Pendaftaran Lomba Photography Sudah Ditutup.";
 
-      // Fungsi untuk menampilkan alert jika lomba Tari Puspanjali ditutup
-      function showClosedTariMessage(event) {
+      // Fungsi untuk menampilkan alert jika lomba Tari Margapati ditutup
+      function showClosedMargapatiMessage(event) {
         event.preventDefault(); // Mencegah perilaku default link
         Swal.fire({
           title: "Informasi",
-          text: closedTariMessage,
+          text: closedMargapatiMessage,
+          icon: "info",
+          confirmButtonText: "Oke",
+        });
+      }
+
+      // Fungsi untuk menampilkan alert jika lomba Tari Puspanjali ditutup
+      function showClosedPuspanjaliMessage(event) {
+        event.preventDefault(); // Mencegah perilaku default link
+        Swal.fire({
+          title: "Informasi",
+          text: closedPuspanjaliMessage,
           icon: "info",
           confirmButtonText: "Oke",
         });
@@ -779,22 +827,13 @@
       // Menambahkan event listener pada tombol yang lombanya sudah ditutup
       document
         .getElementById("Daftar1")
-        .addEventListener("click", showClosedTariMessage); // Daftar 1 sudah tutup
-      document
-        .getElementById("Daftar3")
-        .addEventListener("click", showClosedPhotographyMessage); // Daftar 3 sudah tutup
-
-      // Fungsi untuk tombol yang masih aktif
-      function handleActiveLombaClick(event) {
-        // Di sini bisa kamu tambahkan logika untuk membuka halaman pendaftaran atau mengarahkan ke halaman lain
-        // Contoh sederhana:
-        window.location.href = event.target.href;
-      }
-
-      // Menambahkan event listener pada tombol yang lombanya masih bisa diakses
+        .addEventListener("click", showClosedMargapatiMessage); // Daftar 1 untuk Tari Margapati sudah tutup
       document
         .getElementById("Daftar2")
-        .addEventListener("click", handleActiveLombaClick); // Daftar 2 masih buka
+        .addEventListener("click", showClosedPuspanjaliMessage); // Daftar 2 untuk Tari Puspanjali sudah tutup
+      document
+        .getElementById("Daftar3")
+        .addEventListener("click", showClosedPhotographyMessage); // Daftar 3 untuk Photography sudah tutup
     </script>
 
     <!--Icon informasi SC-->
